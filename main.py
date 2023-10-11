@@ -69,15 +69,28 @@
 #     print("Nothing found")
 
 #5
-first_list = [12, 3, 4, 5, 6, 8, 4, 3, 66, 1]
-second_list = [1, 2, 3, 6, 4, 7, 8, 10, 55]
-# second_list = [0, 0, 0]
+# first_list = [12, 3, 4, 5, 6, 8, 4, 3, 66, 1]
+# second_list = [1, 2, 3, 6, 4, 7, 8, 10, 55]
+# # second_list = [0, 0, 0]
+#
+# def search_of_common(list1, list2):
+#     common = set(first_list).intersection(second_list)
+#     return common
+#
+# if len(search_of_common(first_list, second_list)) != 0:
+#     print(f"Some common: {search_of_common(first_list, second_list)}")
+# else:
+#     print("Nothing found")
 
-def search_of_common(list1, list2):
-    common = set(first_list).intersection(second_list)
-    return common
+#6
+start_list = [1, 2, 3, 6, 4, 7, 8, 10, 55]
+degree = 2
 
-if len(search_of_common(first_list, second_list)) != 0:
-    print(f"Some common: {search_of_common(first_list, second_list)}")
-else:
-    print("Nothing found")
+def find_degree_list(num, x):
+    new_list = []
+    for i in range(1,x):
+        for n in num:
+            new_list.append(n*n)
+    return new_list
+
+print(f"New list in degree {degree}: {find_degree_list(start_list, degree)}")
