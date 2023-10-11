@@ -50,20 +50,34 @@
 # print(f"The number of primes in a list: {counter_of_prime_numbers(numbers)}")
 
 #4
-list_for_del = [1, 2, 3, 4, 5, 6, 7, 1, 4]
-def del_element_in_list(num):
-    counter_del = 0
-    for_del = 4
-    for x in num:
-        if x == for_del:
-            counter_del += 1
+# list_for_del = [1, 2, 3, 4, 5, 6, 7, 1, 4]
+# def del_element_in_list(num):
+#     counter_del = 0
+#     for_del = 4
+#     for x in num:
+#         if x == for_del:
+#             counter_del += 1
+#
+#     if counter_del != 0:
+#         num.remove(for_del)
+#
+#     return counter_del
+#
+# if del_element_in_list(list_for_del) != 0:
+#     print(f"Counter of deleted elements: {del_element_in_list(list_for_del)}")
+# else:
+#     print("Nothing found")
 
-    if counter_del != 0:
-        num.remove(for_del)
+#5
+first_list = [12, 3, 4, 5, 6, 8, 4, 3, 66, 1]
+second_list = [1, 2, 3, 6, 4, 7, 8, 10, 55]
+# second_list = [0, 0, 0]
 
-    return counter_del
+def search_of_common(list1, list2):
+    common = set(first_list).intersection(second_list)
+    return common
 
-if del_element_in_list(list_for_del) != 0:
-    print(f"Counter of deleted elements: {del_element_in_list(list_for_del)}")
+if len(search_of_common(first_list, second_list)) != 0:
+    print(f"Some common: {search_of_common(first_list, second_list)}")
 else:
     print("Nothing found")
