@@ -16,10 +16,16 @@ for num in range(NUM_SIZE):
 print(numbers)
 
 #1
-def multiplication_list(num):
+def multiplication_list(num) -> int:
     res_multi = 1
     for i in num:
         res_multi *= i
     return res_multi
 
 print(f"Result of multiplication: {multiplication_list(numbers)}")
+
+#2
+def find_min(num_min) -> int:
+    return min(num_min)
+
+print(f"Minimum in the list: {find_min(numbers)}")
