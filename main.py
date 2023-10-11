@@ -15,3 +15,11 @@ for num in range(NUM_SIZE):
 
 print(numbers)
 
+#1
+def multiplication_list(num):
+    res_multi = 1
+    for i in num:
+        res_multi *= i
+    return res_multi
+
+print(f"Result of multiplication: {multiplication_list(numbers)}")
